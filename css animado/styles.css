@@ -1,0 +1,86 @@
+.box {
+    width: 150px;
+    height:150px ;
+    background: red;
+    position: fixed;
+    /* transition: width 4s, ease-in-out 1s, background 3s;
+    transform: rotate(45deg) ; */
+    animation-name: cambiodecolor, posicion;
+    animation-duration: 2s;
+    
+    
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.box:hover{
+    background-color: blue;
+    width: 300px;
+    border-radius: 20px;
+    
+   
+    
+   
+}
+
+@keyframes cambiodecolor {
+    0% {
+         background-color: blue;
+    }
+
+    25%{
+         background-color: cyan;
+    }
+
+    50% {
+          background-color: red;
+    }
+
+    100% {
+        background-color: rgb(255, 127, 249);
+    }
+}
+
+@keyframes posicion {
+
+    0%{
+        left: 0px;
+        top:0px;
+    }
+
+    25%{
+        left:50px;
+        top:0px;
+    }
+
+    75%{
+        top:50px;
+        left:50px;
+    }
+
+
+   100%{
+       left: 0px;
+       top:50px;
+   }
+
+}
+
+/* Transiciones: 
+
+transition-property: width;
+
+transition-duration: 2s;
+
+transition-timing-function: linear;
+
+transition: background 5s;
+
+transition: width 4s, ease-in-out 1s, background 3s, rotate 45deg;
